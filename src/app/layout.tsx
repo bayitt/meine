@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`h-full antialiased`}>
       <body
-        className={`${raleway.className} min-h-full bg-[#F9EAE1] sm-w-[90%] max-w-[1200px] mx-auto`}
+        className={`${raleway.className} min-h-full bg-[#F9EAE1] sm-w-[90%] max-w-[1080px] mx-auto`}
       >
         <header className="flex justify-between items-center py-8">
           <p className="text-lg font-semibold">Ọmọ́gẹ </p>
