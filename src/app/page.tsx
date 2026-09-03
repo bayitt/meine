@@ -1,12 +1,12 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Card, TCard } from "../components/Card";
+import { Card, TCard } from "@/src/components/Card";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
-import { Button } from "../components/Button";
+import { Button } from "@/src/components/Button";
 import { GiSelfLove } from "react-icons/gi";
-import { Proposal } from "../components/Proposal";
-import { Header } from "../components/Header";
+import { Proposal } from "@/src/components/Proposal";
+import { Header } from "@/src/components/Header";
 
 export default function Home() {
   const [isProposalOpen, setIsProposalOpen] = useState(false);

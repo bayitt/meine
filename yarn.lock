@@ -265,6 +265,11 @@
     "@eslint/core" "^0.17.0"
     levn "^0.4.1"
 
+"@hiseb/confetti@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@hiseb/confetti/-/confetti-2.2.0.tgz#5c5823eae8494295479e487bd62ceb2754748e09"
+  integrity sha512-iCcTe2AS2Mnj7f2BGPnOetjnX+Qs1jgnKU0GSYyQHFB42psio0EpgxmPXOXf2wcCGBH/W+1G2Ecl4hcbsin1Kg==
+
 "@humanfs/core@^0.19.2":
   version "0.19.2"
   resolved "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.2.tgz#a8272ca03b2acf492670222b2320b6c421bfde60"
