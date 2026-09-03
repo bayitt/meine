@@ -8,7 +8,7 @@ export const Header = () => {
     <header className="flex justify-between items-center py-8">
       <p className="text-lg font-semibold">Ọmọ́gẹ </p>
       <Button handleClick={() => {}}>
-        Message <HiMail size={18} />
+        Compliment <HiMail size={18} />
       </Button>
     </header>
   );

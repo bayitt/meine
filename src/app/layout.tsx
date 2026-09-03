@@ -16,10 +16,10 @@ const onest = Onest({
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`h-full antialiased`}>
-      <body
-        className={`${onest.className} min-h-full bg-[#F9EAE1] sm-w-[90%] max-w-[1080px] mx-auto font-light`}
-      >
-        {children}
+      <body className={`${onest.className} min-h-full bg-[#F9EAE1] font-light`}>
+        <section className=" sm-w-[80%] max-w-[1080px] mx-auto">
+          {children}
+        </section>
       </body>
     </html>
   );
