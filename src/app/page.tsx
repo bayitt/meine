@@ -1,7 +1,16 @@
+"use client";
+
+import { useRef, useState } from "react";
 import { Card, TCard } from "../components/Card";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
+import { Button } from "../components/Button";
+import { GiSelfLove } from "react-icons/gi";
+import { Proposal } from "../components/Proposal";
+import { Header } from "../components/Header";
 
 export default function Home() {
+  const [isProposalOpen, setIsProposalOpen] = useState(false);
+  const cardContainer = useRef<HTMLDivElement | null>(null);
   const image =
     "https://res.cloudinary.com/olamileke/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1788372370/meine/12095_hel8ti.jpg";
   const text =
@@ -16,29 +25,55 @@ export default function Home() {
   const displayCards = () =>
     cards.map((card, index) => <Card key={index} {...card} />);
 
+  const handleScroll = (dir: "left" | "right") => {
+    if (!cardContainer.current) return;
+
+    cardContainer.current.scrollLeft =
+      dir == "left"
+        ? cardContainer.current.scrollLeft - 200
+        : cardContainer.current.scrollLeft + 200;
+  };
+
   return (
     <div className="relative">
-      <div className="flex gap-6 mt-10 overflow-x-scroll !scroll-smooth cards">
+      <Header />
+      <div
+        className="flex gap-6 mt-10 overflow-x-scroll !scroll-smooth cards"
+        ref={cardContainer}
+      >
         <div
-          className="w-[40px] h-[40px] bg-[#F9EAE1] cursor-pointer shadow absolute flex justify-center items-center inline-flex rounded-full z-10"
+          className="w-[50px] h-[50px] bg-[#F9EAE1] cursor-pointer shadow absolute flex justify-center items-center inline-flex rounded-full z-10"
           style={{
-            top: "calc((100% - 40px) / 2)",
-            left: "-20px",
+            top: "calc((100% + 50px) / 2)",
+            left: "-25px",
           }}
+          onClick={() => handleScroll("left")}
         >
           <IoArrowBack />
         </div>
         {displayCards()}
+        <div className="shrink-0 w-3/7 p-10 shadow rounded-[2px] border-[2px] border-[#CC8B86] border-dashed flex justify-center items-center">
+          <Button handleClick={() => setIsProposalOpen(true)}>
+            To My Love
+            <GiSelfLove />
+          </Button>
+        </div>
         <div
-          className="w-[40px] h-[40px] bg-[#F9EAE1] cursor-pointer shadow absolute flex justify-center items-center inline-flex rounded-full z-10"
+          className="w-[50px] h-[50px] bg-[#F9EAE1] cursor-pointer shadow absolute flex justify-center items-center inline-flex rounded-full z-10"
           style={{
-            top: "calc((100% - 40px) / 2)",
-            right: "-20px",
+            top: "calc((100% + 50px) / 2)",
+            right: "-25px",
           }}
+          onClick={() => handleScroll("right")}
         >
           <IoArrowForward />
         </div>
       </div>
+
+      <Proposal
+        isOpen={isProposalOpen}
+        handleClose={() => setIsProposalOpen(false)}
+      />
     </div>
   );
 }
