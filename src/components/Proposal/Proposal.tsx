@@ -9,14 +9,22 @@ export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
       className={`fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-[rgba(0,0,0,0.3)] transition-opacity duration-400 ${
         isOpen ? "opacity-100 z-20" : "opacity-0 -z-20"
       }`}
-      onClick={(e) => {
+      onClick={() => {
         handleClose();
-        e.stopPropagation();
       }}
     >
-      <div className="w-[700px] bg-white flex flex-row-reverse p-4">
-        <div className="w-2/3 pt-10 px-8 flex flex-col gap-5 text-[rgba(0,0,0,0.9)] text-[0.95rem]">
-          <p className="text-2xl font-semibold">Will You Be My Girlfriend ?</p>
+      <div
+        className="w-[90%] sm:w-[85%] lg:w-[700px] bg-white flex flex-col sm:flex-row p-5 sm:p-4"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <img
+          src="https://res.cloudinary.com/olamileke/image/upload/v1788433843/meine/image_uxay6e.jpg"
+          className="sm:w-1/3 h-[270px] sm:h-[320px] mb-5 sm:mb-0 object-fit"
+        />
+        <div className="w-full md:w-2/3 sm:pt-10 sm:pl-8 sm:pr-10 flex flex-col items-center gap-3 sm:gap-5 text-[rgba(0,0,0,0.9)] text-[0.9rem]">
+          <p className="text-xl sm:text-2xl font-semibold">
+            Will You Be My Girlfriend ?
+          </p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
             tristique varius erat non tristique. Fusce faucibus dui non egestas
@@ -30,11 +38,6 @@ export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
             you say no. It's you and me baby 😏.
           </p>
         </div>
-
-        <img
-          src="https://res.cloudinary.com/olamileke/image/upload/v1788433843/meine/image_uxay6e.jpg"
-          className="w-1/3 h-[320px] object-fit"
-        />
       </div>
     </div>
   );

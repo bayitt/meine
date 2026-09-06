@@ -38,11 +38,11 @@ export default function Home() {
     <div className="relative">
       <Header />
       <div
-        className="flex gap-6 mt-10 overflow-x-scroll !scroll-smooth cards"
+        className="flex flex-wrap lg:flex-nowrap gap-3 sm:gap-6 mt-5 sm:mt-10 overflow-x-scroll !scroll-smooth cards pb-14 lg:pb-0"
         ref={cardContainer}
       >
         <div
-          className="w-[50px] h-[50px] bg-[#F9EAE1] cursor-pointer shadow absolute flex justify-center items-center inline-flex rounded-full z-10"
+          className="w-[50px] h-[50px] bg-[#F9EAE1] cursor-pointer shadow absolute hidden lg:flex justify-center items-center rounded-full z-10"
           style={{
             top: "calc((100% + 50px) / 2)",
             left: "-25px",
@@ -52,14 +52,14 @@ export default function Home() {
           <IoArrowBack />
         </div>
         {displayCards()}
-        <div className="shrink-0 w-3/7 p-10 shadow rounded-[2px] border-[2px] border-[#CC8B86] border-dashed flex justify-center items-center">
+        <div className="shrink-0 w-full lg:w-3/7 p-10 shadow rounded-[2px] border-[2px] border-[#CC8B86] border-dashed flex justify-center items-center">
           <Button handleClick={() => setIsProposalOpen(true)}>
             To My Love
             <GiSelfLove />
           </Button>
         </div>
         <div
-          className="w-[50px] h-[50px] bg-[#F9EAE1] cursor-pointer shadow absolute flex justify-center items-center inline-flex rounded-full z-10"
+          className="w-[50px] h-[50px] bg-[#F9EAE1] cursor-pointer shadow absolute hidden lg:flex justify-center items-center rounded-full z-10"
           style={{
             top: "calc((100% + 50px) / 2)",
             right: "-25px",
