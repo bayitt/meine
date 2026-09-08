@@ -3,7 +3,13 @@ import path from "node:path";
 import { redirect } from "next/navigation";
 import { Home } from "@/src/components/Home";
 
-export default function HomePage() {
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+
+export default async function HomePage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
   const relationshipFilePath = path.join(
     process.cwd(),
     "src",
@@ -13,7 +19,11 @@ export default function HomePage() {
   const fileContent = fs.readFileSync(relationshipFilePath, "utf8");
 
   if (fileContent.trim() !== "") {
-    redirect("/in-a-relationship");
+    const parsedSearchParams = await searchParams;
+
+    if (!parsedSearchParams["ignore_file"]) {
+      redirect("/in-a-relationship");
+    }
   }
 
   return <Home />;
