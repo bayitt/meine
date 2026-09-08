@@ -31,7 +31,7 @@ export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
           <p className="text-xl sm:text-2xl font-semibold">
             Will You Be My Girlfriend ?
           </p>
-          <p>
+          <p className="text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
             tristique varius erat non tristique. Fusce faucibus dui non egestas
             rhoncus.
@@ -42,7 +42,7 @@ export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
           >
             Absolutely, Yes
           </Button>
-          <p>
+          <p className="text-center">
             There is no option for you to say no because well, I am not letting
             you say no. It's you and me baby 😏.
           </p>

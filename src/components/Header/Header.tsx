@@ -1,17 +1,11 @@
 "use client";
 
-import { Button } from "../Button";
-import { HiMail } from "react-icons/hi";
-
 export const Header = () => {
   return (
-    <header className="flex justify-between items-center py-8">
+    <header className="flex justify-center items-center pt-10 sm:pt-14 pb-6">
       <p className="text-lg font-semibold underline decoration-double">
-        Ọmọ́gẹ{" "}
+        Àríkẹ́ Mi{" "}
       </p>
-      <Button handleClick={() => {}}>
-        Compliment <HiMail size={18} />
-      </Button>
     </header>
   );
 };
