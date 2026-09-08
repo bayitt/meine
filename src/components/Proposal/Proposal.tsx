@@ -1,9 +1,15 @@
 import { FC } from "react";
+import { redirect } from "next/navigation";
 import { TProposal } from "./types";
 import { Button } from "../Button";
-import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { recordRelationshipStart } from "./actions";
 
 export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
+  const handleProposalResponse = async () => {
+    await recordRelationshipStart();
+    redirect("/in-a-relationship");
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-[rgba(0,0,0,0.3)] transition-opacity duration-400 ${
@@ -30,7 +36,10 @@ export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
             tristique varius erat non tristique. Fusce faucibus dui non egestas
             rhoncus.
           </p>
-          <Button handleClick={() => {}} classes="flex justify-center w-fit">
+          <Button
+            handleClick={handleProposalResponse}
+            classes="flex justify-center w-fit"
+          >
             Absolutely, Yes
           </Button>
           <p>
