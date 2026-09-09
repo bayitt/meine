@@ -24,8 +24,8 @@ export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <img
-          src="https://res.cloudinary.com/olamileke/image/upload/v1788433843/meine/image_uxay6e.jpg"
-          className="sm:w-1/3 h-[270px] sm:h-[320px] mb-5 sm:mb-0 object-fit sm:object-cover"
+          src="https://res.cloudinary.com/olamileke/image/upload/v1788970007/meine/image_1_kihrhj.jpg"
+          className="sm:w-1/3 h-[270px] sm:h-[320px] mb-5 sm:mb-0 object-cover"
         />
         <div className="w-full md:w-2/3 sm:pt-10 sm:pl-8 sm:pr-10 flex flex-col items-center gap-3 sm:gap-5 text-[rgba(0,0,0,0.9)] text-[0.9rem]">
           <p className="text-xl sm:text-2xl font-semibold">
