@@ -1,7 +1,17 @@
 import fs from "node:fs";
 import path from "node:path";
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Home } from "@/src/components/Home";
+import { title, description, openGraph, twitter, icons } from "@/src/utilities";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: { ...openGraph, url: "https://stephanie.olamileke.dev" },
+  twitter: { ...twitter, url: "https://stephanie.olamileke.dev" } as any,
+  icons,
+};
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
@@ -22,7 +32,7 @@ export default async function HomePage({
     const parsedSearchParams = await searchParams;
 
     if (!parsedSearchParams["ignore_file"]) {
-      redirect("/in-a-relationship");
+      redirect("/dating");
     }
   }
 

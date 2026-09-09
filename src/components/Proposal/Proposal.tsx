@@ -7,7 +7,7 @@ import { recordRelationshipStart } from "./actions";
 export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
   const handleProposalResponse = async () => {
     await recordRelationshipStart();
-    redirect("/in-a-relationship");
+    redirect("/dating");
   };
 
   return (
@@ -32,9 +32,8 @@ export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
             Will You Be My Girlfriend ?
           </p>
           <p className="text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            tristique varius erat non tristique. Fusce faucibus dui non egestas
-            rhoncus.
+            I've had a taste of what love is with you and I want more, I want
+            you, all of you, in the highs and the lows.
           </p>
           <Button
             handleClick={handleProposalResponse}
@@ -43,8 +42,8 @@ export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
             Absolutely, Yes
           </Button>
           <p className="text-center">
-            There is no option for you to say no because well, I am not letting
-            you say no. It's you and me baby 😏.
+            There is no option for you to say no because well, I am not taking a
+            no from you. It's you and me baby 😏.
           </p>
         </div>
       </div>

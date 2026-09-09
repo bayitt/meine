@@ -55,10 +55,10 @@ export const Relationship: FC<TRelationship> = ({
           </p>
 
           <p className="text-md sm:text-lg leading-7 text-center lg:text-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            tristique varius erat non tristique. Fusce faucibus dui non egestas
-            rhoncus. Nulla fringilla feugiat ex ac consectetur. Quisque
-            elementum auctor porta.
+            Like someone gifted a precious item, I intend to fully treasure you
+            and treat you like the gem that you are. It's me and my baby for
+            life and this is just the beginning of our journey. I love you
+            Stephanie Chidiogo Okeke 🫶.
           </p>
         </div>
 

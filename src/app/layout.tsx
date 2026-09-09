@@ -1,11 +1,5 @@
 import { Onest } from "next/font/google";
-import type { Metadata } from "next";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "Just a man expressing his love for Stephanie.",
-};
 
 const onest = Onest({
   subsets: ["latin"],
@@ -15,7 +9,10 @@ const onest = Onest({
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`h-full antialiased`}>
+    <html lang="en" className="h-full antialiased">
+      <head>
+        <link rel="icon" href="/icon.png" sizes="any" />
+      </head>
       <body className={`${onest.className} min-h-full bg-[#F9EAE1] font-light`}>
         <section className="w-9/10 max-w-[1080px] mx-auto">{children}</section>
       </body>

@@ -1,26 +1,17 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Card, TCard } from "@/src/components/Card";
+import { Card } from "@/src/components/Card";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import { Button } from "@/src/components/Button";
 import { GiSelfLove } from "react-icons/gi";
 import { Proposal } from "@/src/components/Proposal";
 import { Header } from "@/src/components/Header";
+import { cards } from "./cards";
 
 export const Home = () => {
   const [isProposalOpen, setIsProposalOpen] = useState(false);
   const cardContainer = useRef<HTMLDivElement | null>(null);
-  const image =
-    "https://res.cloudinary.com/olamileke/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1788372370/meine/12095_hel8ti.jpg";
-  const text =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique varius erat non tristique. Fusce faucibus dui non egestas rhoncus. Nulla fringilla feugiat ex ac consectetur. Quisque elementum auctor porta. Suspendisse potenti. Nullam eu viverra leo. Vestibulum tempor nulla ac quam laoreet ullamcorper. Aenean tincidunt, risus sit amet cursus iaculis, ex orci imperdiet dolor, id accumsan neque arcu eu nulla. Aliquam luctus nibh at tortor pulvinar sodales.";
-  const cards: TCard[] = [
-    { image, text },
-    { image, text },
-    { image, text },
-    { image, text },
-  ];
 
   const displayCards = () =>
     cards.map((card, index) => <Card key={index} {...card} />);
