@@ -5,6 +5,8 @@ import { Relationship } from "@/src/components/Relationship";
 import { title, description, openGraph, twitter, icons } from "@/src/utilities";
 import { getTimeCount } from "@/src/utilities";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title,
   description,

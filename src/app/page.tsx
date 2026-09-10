@@ -5,6 +5,8 @@ import { redirect } from "next/navigation";
 import { Home } from "@/src/components/Home";
 import { title, description, openGraph, twitter, icons } from "@/src/utilities";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title,
   description,
