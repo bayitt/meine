@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import { Relationship } from "@/src/components/Relationship";
 import { title, description, openGraph, twitter, icons } from "@/src/utilities";
 import { getTimeCount } from "@/src/utilities";
@@ -23,6 +24,11 @@ export default function InARelationship() {
   );
 
   const relationshipStart = fs.readFileSync(relationshipFilePath, "utf8");
+
+  if (relationshipStart.trim() === "") {
+    redirect("/");
+  }
+
   let relationshipStartDate = new Date(relationshipStart);
   relationshipStartDate = isNaN(relationshipStartDate.getTime())
     ? new Date()

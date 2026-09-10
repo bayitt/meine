@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { redirect } from "next/navigation";
 import { TProposal } from "./types";
 import { Button } from "../Button";
 import { recordRelationshipStart } from "./actions";
@@ -7,7 +6,6 @@ import { recordRelationshipStart } from "./actions";
 export const Proposal: FC<TProposal> = ({ isOpen, handleClose }) => {
   const handleProposalResponse = async () => {
     await recordRelationshipStart();
-    redirect("/dating");
   };
 
   return (

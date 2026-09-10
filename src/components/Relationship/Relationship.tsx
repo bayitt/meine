@@ -74,7 +74,7 @@ export const Relationship: FC<TRelationship> = ({
 
               <span className="w-1/3 h-[2px] bg-[#7D4F50] mb-5" />
 
-              <div className="flex gap-7 justify-center">
+              <div className="flex gap-5 justify-center">
                 <div>
                   <p className="text-2xl text-[#7D4F50] text-center font-semibold">
                     {years}

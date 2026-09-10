@@ -11,7 +11,7 @@ export const getTimeCount = (date: Date) => {
   const seconds = Math.floor((interval % (60 * 1000)) / 1000);
 
   const parseNumber = (time: number) => {
-    let parsedTime = time.toString();
+    let parsedTime = (time < 0 ? 0 : time).toString();
     return parsedTime.length > 1 ? parsedTime : "0" + parsedTime;
   };
 
